@@ -18,11 +18,10 @@ public class Bank
 		bankAccounts.get(2).setBalance(100.00);
 		bankAccounts.get(3).setBalance(50.00);
 		
-		printArray(bankAccounts);
-		
+//		printArray(bankAccounts);
 		bankAccounts.get(0).withdraw(200.00);
 		bankAccounts.get(1).deposit(300.00);
-		bankAccounts.get(2).deposit(200.00);
+		bankAccounts.get(2).deposit(50.00);
 		bankAccounts.get(3).withdraw(100.00);
 		update(bankAccounts);
 		printArray(bankAccounts);
@@ -34,9 +33,9 @@ public class Bank
 	{
 		for(Account acc:b)
 		{
-			if(acc.getClass()==SavingsAccount.class)
+			if(acc instanceof SavingsAccount)
 			{
-				((SavingsAccount) acc).Interest();
+			((SavingsAccount) acc).Interest();
 			}
 			else if(acc.getClass()==CheckingAccount.class)
 			{
