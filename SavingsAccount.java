@@ -10,7 +10,7 @@ public class SavingsAccount extends  Account
 	}
 	public void Interest()
 	{	 
-		this.deposit(this.getBalance() + (this.getBalance()*interest));
+		this.deposit( (this.getBalance()*interest));
 	}
 	@Override
 	public void deposit(double amt)
