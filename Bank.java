@@ -35,7 +35,7 @@ public class Bank
 		{
 			if(acc instanceof SavingsAccount)
 			{
-			((SavingsAccount) acc).Interest();
+				((SavingsAccount) acc).Interest();
 			}
 			else if(acc.getClass()==CheckingAccount.class)
 			{
@@ -48,7 +48,7 @@ public class Bank
 		}
 		
 	}
-	public static void printArray(ArrayList<Account>a)
+	public static void printArray(ArrayList<Account> a)
 	{
 		for(Account acz:a)
 		{

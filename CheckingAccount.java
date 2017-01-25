@@ -1,4 +1,3 @@
-
 public class CheckingAccount extends Account
 {	
 	private double overDraftLimit=-250.00;
@@ -60,7 +59,7 @@ public class CheckingAccount extends Account
 @Override
 public String toString() {
 	
-	return "Account Type : Checking Account \n" +"balance=" + getBalance() +"\n"+ " acctNum=" + this.getAccountNumber()+"\n"+errcodemes;
+	return "Account Type: Checking Account \n" +"Balance = " +defaultFormat.format(this.getBalance()) +"\n"+ " Account Number =" + this.getAccountNumber()+"\n"+errcodemes;
 
 
 

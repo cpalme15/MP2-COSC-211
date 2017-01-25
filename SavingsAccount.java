@@ -1,19 +1,16 @@
-
 public class SavingsAccount extends  Account  
 {
 
 	private static double interest;
-	private static double balance;
 	
 	public SavingsAccount(int num) {
 		super(num);
-		balance=this.getBalance();
+		interest = 0.05;
 
 	}
-	public static void Interest()
+	public void Interest()
 	{	 
-		interest=balance*0.05;
-		balance=balance+interest;
+		this.deposit(this.getBalance() + (this.getBalance()*interest));
 	}
 	@Override
 	public void deposit(double amt)
@@ -46,6 +43,6 @@ public class SavingsAccount extends  Account
 }
 	@Override
 	public String toString(){
-	return "Account Type : Savings Account  \n" +"balance=" + getBalance() +"\n"+ " acctNum=" + this.getAccountNumber();
+	return "Account Type : Savings Account  \n" +"Balance = " + defaultFormat.format(this.getBalance()) +"\n"+ " Account Number = " + this.getAccountNumber();
 	}
 }

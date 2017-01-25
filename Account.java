@@ -1,8 +1,9 @@
+import java.text.NumberFormat;
 
 public class Account {
 private double balance;
 private int acctNum;
-
+NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
 
 public  Account(int num)
 	{
@@ -43,7 +44,7 @@ public  Account(int num)
 	}
 	@Override
 	public String toString() {
-		return "Account [balance=" + getBalance() + ", acctNum=" + acctNum + "]";
+		return "Account [balance=" + defaultFormat.format(getBalance()) + ", acctNum=" + acctNum + "]";
 	}
 	public final void print()
 	{
